@@ -1,323 +1,360 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-body{
-    background-color: black;
+body {
+  background-color: black;
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
-.heading{
-    cursor:default;
-    margin-top: 50px;
-    color: white;
-    font-size: 4rem;
-    font-weight: 600;
+.heading {
+  cursor: default;
+  margin-top: 50px;
+  color: white;
+  font-size: 4rem;
+  font-weight: 600;
 }
-.heading span{
-    
-    display: inline-block;
-    position: relative;;
-    transition: all 0.3s linear;
+.heading span {
+  display: inline-block;
+  position: relative;
+  transition: all 0.3s linear;
 }
-.heading-0 span{
-    display: inline-block;
-    
-    
+.heading-0 span {
+  display: inline-block;
 }
-.animate-0{
-    color: rgb(0, 255, 221);
-    text-shadow: 2px 2px 5px rgb(255, 255, 255);
+.animate-0 {
+  color: rgb(0, 255, 221);
+  text-shadow: 2px 2px 5px rgb(255, 255, 255);
 }
 
-.heading-0 span:hover{
-    transform: translateY(-20px) ;
-    text-shadow: 2px 2px 10px rgb(30, 255, 225);
-    
+.heading-0 span:hover {
+  transform: translateY(-20px);
+  text-shadow: 2px 2px 10px rgb(30, 255, 225);
 }
-.animate-1{
-    color: rgb(208, 255, 0) ;
-    text-shadow: 2px 3px 5px yellowgreen;
-}
-
-.heading-1 span:hover{
-    animation: animat 0.8s  infinite linear;
-    
-    z-index: 5;
-    text-shadow: 4px 4px 5px rgba(157, 255, 0, 0.5);
-}
-@keyframes animat{
-    0%{
-        transform: rotate(0deg);
-    }
-    25%{
-        transform: rotate(20deg);
-    }
-    75%{
-        transform: rotate(-20deg);
-    }
-    100%{
-        transform: rotate(0deg);
-    }
-}
-.box{
-    
-    margin: 20px;
-    width: 200px;
-    height: 300px;
-    display: flex;
-    position: relative;
-    justify-content: center;
-    align-items: center;
-    background-color: black;
-}
-.box h1{
-    text-align: center;
-    color: cyan;
-    text-shadow: 2px 2px 10px  rgb(211, 255, 253);
-    cursor: default;
+.animate-1 {
+  color: rgb(208, 255, 0);
+  text-shadow: 2px 3px 5px yellowgreen;
 }
 
-.box:before{
-    
-    content: '';
-    position: absolute;
-    top: -2px;
-    right: -2px;
-    left: -2px;
-    bottom: -2px;
-    background-color: #fff;
-    z-index:-1;
+.heading-1 span:hover {
+  animation: animat 0.8s infinite linear;
+
+  z-index: 5;
+  text-shadow: 4px 4px 5px rgba(157, 255, 0, 0.5);
 }
-.box:after{
-    content: '';
-    position: absolute;
-    top: -3px;
-    right: -3px;
-    left: -3px;
-    bottom: -3px;
-    background-color: #fff;
-    z-index:-2;
-    filter: blur(20px);
+@keyframes animat {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(20deg);
+  }
+  75% {
+    transform: rotate(-20deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
 }
-.box::before{
-    animation:colorChange2 2s infinite alternate;
+.box {
+  margin: 20px;
+  width: 200px;
+  height: 300px;
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+}
+.box h1 {
+  text-align: center;
+  color: cyan;
+  text-shadow: 2px 2px 10px rgb(211, 255, 253);
+  cursor: default;
 }
 
-@keyframes colorChange2{
-    0%{
-        filter: hue-rotate(0deg) ;
-    }
-    100%{
-        filter: hue-rotate(360deg);
-    }
+.box:before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  left: -2px;
+  bottom: -2px;
+  background-color: #fff;
+  z-index: -1;
 }
-.box:after{
-    animation: colorChange3 2s infinite alternate;
+.box:after {
+  content: "";
+  position: absolute;
+  top: -3px;
+  right: -3px;
+  left: -3px;
+  bottom: -3px;
+  background-color: #fff;
+  z-index: -2;
+  filter: blur(20px);
+}
+.box::before {
+  animation: colorChange2 2s infinite alternate;
 }
 
-@keyframes colorChange3{
-    0%{
-        filter: hue-rotate(0deg) blur(20px);
-    }
-    100%{
-        filter: hue-rotate(360deg) blur(20px);
-    }
+@keyframes colorChange2 {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+  100% {
+    filter: hue-rotate(360deg);
+  }
+}
+.box:after {
+  animation: colorChange3 2s infinite alternate;
 }
 
-
-
-
-.circle
-{  margin: 100px;
-    width: 200px;
-    height: 200px;
-    border-radius:50% ;
-    display: flex;
-    position: relative;
-    justify-content: center;
-    align-items: center;
-    background-color: rgb(78, 78, 255);
-    border:4px blue solid;
+@keyframes colorChange3 {
+  0% {
+    filter: hue-rotate(0deg) blur(20px);
+  }
+  100% {
+    filter: hue-rotate(360deg) blur(20px);
+  }
 }
-.circle:before{
-    
-    content: '';
-    position: absolute;
+
+.circle {
+  margin: 100px;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+
+  position: relative;
+
+  background-color: rgb(78, 78, 255);
+  border: 4px blue solid;
+}
+.circle:before {
+  content: "";
+  position: absolute;
+  top: -0px;
+  right: -0px;
+  left: -0px;
+  bottom: -0px;
+  border: 2px blue solid;
+  z-index: -1;
+  border-radius: 50%;
+  animation: border-increase ease-in-out 2s infinite;
+}
+@keyframes border-increase {
+  0% {
+    opacity: 100%;
+
     top: -0px;
     right: -0px;
     left: -0px;
     bottom: -0px;
-    border:2px blue solid;
-    z-index:-1;
-    border-radius: 50%;
-    animation: border-increase ease-in-out 2s infinite;
-
-}
-@keyframes border-increase{
-    0%{
-        opacity: 100%;
-        
-    top: -0px;
-    right: -0px;
-    left: -0px;
-    bottom: -0px;
-    }
-    100%{
-        opacity: 0;
-        top: -80px;
-        right: -80px;
-        left: -80px;
-        bottom: -80px;
-    }
+  }
+  100% {
+    opacity: 0;
+    top: -80px;
+    right: -80px;
+    left: -80px;
+    bottom: -80px;
+  }
 }
 
-.container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    margin: 100px;
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 100px;
 }
-.container a{
-    position: relative;
-    display: inline-block;
-    padding: 15px 30px;
-    border: 2px solid #0f0;
-    margin:40px;
-    text-transform: uppercase;
-    font-weight: 600;
-    text-decoration: none;
-    letter-spacing: 2px;
-    color: #fff;
-    -webkit-box-reflect: below 0px linear-gradient(transparent,#002);
-    transition: 0.5s;
+.container a {
+  position: relative;
+  display: inline-block;
+  padding: 15px 30px;
+  border: 2px solid #0f0;
+  margin: 40px;
+  text-transform: uppercase;
+  font-weight: 600;
+  text-decoration: none;
+  letter-spacing: 2px;
+  color: #fff;
+  -webkit-box-reflect: below 0px linear-gradient(transparent, #002);
+  transition: 0.5s;
 }
 
-.container a:hover{
-    color: #000;
-    box-shadow: 0 0 10px #0f0,
-    0 0 20px #0f0,
-    0 0 40px #0f0,
-    0 0 80px #0f0,
+.container a:hover {
+  color: #000;
+  box-shadow: 0 0 10px #0f0, 0 0 20px #0f0, 0 0 40px #0f0, 0 0 80px #0f0,
     0 0 160px #0f0;
-    transition-delay: 1.5s;
+  transition-delay: 1.5s;
 }
-.container a span{
-    position: relative;
-    z-index: 100;
-
-
+.container a span {
+  position: relative;
+  z-index: 100;
 }
-.container a:nth-child(2)
-{
-    filter: hue-rotate(80deg);
+.container a:nth-child(2) {
+  filter: hue-rotate(80deg);
 }
 
-.container a::before{
-
-    content: '';
-    position: absolute;
-    left: -20px;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 20px;
-    height: 2px;
-    background: #0f0;
-    box-shadow: 5px -8px 0 #0f0,5px 8px 0 #0f0;
-    transition: width 0.5s,left 0.5s,height 0.5s,box-shadow 0.5s ;
-    transition-delay: 1s,0.5s,0s,0s;
+.container a::before {
+  content: "";
+  position: absolute;
+  left: -20px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 2px;
+  background: #0f0;
+  box-shadow: 5px -8px 0 #0f0, 5px 8px 0 #0f0;
+  transition: width 0.5s, left 0.5s, height 0.5s, box-shadow 0.5s;
+  transition-delay: 1s, 0.5s, 0s, 0s;
 }
 
-
-.container a:hover::before
-{
-    width: 60%;
-    left: -2px;
-    height: 50px;
-    box-shadow: 5px 1px 0 #0f0,5px -1px 0 #0f0;
-    transition-delay: 0s,0s,0.5s,1s;
-
-    
+.container a:hover::before {
+  width: 60%;
+  left: -2px;
+  height: 50px;
+  box-shadow: 5px 1px 0 #0f0, 5px -1px 0 #0f0;
+  transition-delay: 0s, 0s, 0.5s, 1s;
 }
-.container a::after{
-
-    content: '';
-    position: absolute;
-    right: -20px;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 20px;
-    height: 2px;
-    background: #0f0;
-    box-shadow: -5px -8px 0 #0f0,-5px 8px 0 #0f0;
-    transition: width 0.5s,left 0.5s,height 0.5s,box-shadow 0.5s ;
-    transition-delay: 1s,0.5s,0s,0s;
+.container a::after {
+  content: "";
+  position: absolute;
+  right: -20px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 2px;
+  background: #0f0;
+  box-shadow: -5px -8px 0 #0f0, -5px 8px 0 #0f0;
+  transition: width 0.5s, left 0.5s, height 0.5s, box-shadow 0.5s;
+  transition-delay: 1s, 0.5s, 0s, 0s;
 }
 
-
-.container a:hover::after
-{
-    width: 60%;
-    right: -2px;
-    height: 50px;
-    box-shadow: -5px 1px 0 #0f0,-5px -1px 0 #0f0;
-    transition-delay: 0s,0s,0.5s,1s;
-
-    
+.container a:hover::after {
+  width: 60%;
+  right: -2px;
+  height: 50px;
+  box-shadow: -5px 1px 0 #0f0, -5px -1px 0 #0f0;
+  transition-delay: 0s, 0s, 0.5s, 1s;
 }
-.spiral{
-    position: relative;
-    width: 120px;
-    height: 120px;
-    margin: 100px;
+.spiral {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  margin: 100px;
 }
-.spiral span{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    transform: rotate(calc(18deg*var(--i)));
-    animation: colorBg 2s linear infinite;
+.spiral span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: rotate(calc(18deg * var(--i)));
+  animation: colorBg 2s linear infinite;
 }
 
-@keyframes colorBg{
-    0%{
-        filter: hue-rotate(0deg);
-    }
-    100%{
-        filter: hue-rotate(360deg);
-    }
+@keyframes colorBg {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+  100% {
+    filter: hue-rotate(360deg);
+  }
 }
 
-.spiral span::before{
-    content: '';
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    width: 15px;
-    border-radius: 50%;
-    height: 15px;
-    background-color: #00ff0a;
-    box-shadow: 0 0 10px #00ff0a,
-    0 0 20px #00ff0a,
-    0 0 40px #00ff0a,
-    0 0 60px #00ff0a,
-    0 0 80px #00ff0a,
-    0 0 100px #00ff0a;
-    animation: anima 2s linear infinite;
-    animation-delay: calc(0.1s*var(--i));
+.spiral span::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 15px;
+  border-radius: 50%;
+  height: 15px;
+  background-color: #00ff0a;
+  box-shadow: 0 0 10px #00ff0a, 0 0 20px #00ff0a, 0 0 40px #00ff0a,
+    0 0 60px #00ff0a, 0 0 80px #00ff0a, 0 0 100px #00ff0a;
+  animation: anima 2s linear infinite;
+  animation-delay: calc(0.1s * var(--i));
 }
-@keyframes anima{
-    0%{
-        transform:scale(1);
-    }
-    100%{
-        transform: scale(0);
-    }
+@keyframes anima {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+section {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  flex-direction: column;
+}
+
+.box-3d {
+  position: absolute;
+  top: calc(50% - 150px);
+  left: calc(50% - 100px);
+  transform: perspective(1000px) rotateY(-45deg);
+  transform-style: preserve-3d;
+  width: 200px;
+  height: 300px;
+  transform-origin: right;
+}
+@keyframes box-3d {
+  0% {
+    transform: perspective(1000px) rotateY(0deg);
+  }
+  100% {
+    transform: perspective(1000px) rotateY(359deg);
+  }
+}
+.box-3d div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+
+  animation: animation3d 3s infinite linear;
+}
+.box-3d div span {
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  box-shadow: -200px -200px 200px  rgb(233, 47, 0),
+                -200px 200px 200px  rgb(233, 47, 0);
+  background: linear-gradient(0deg, rgb(233, 47, 0), yellow,  rgb(233, 47, 0));
+}
+
+.box-3d div span:nth-child(1) {
+  transform: rotateX(45deg);
+}
+.box-3d div span:nth-child(2) {
+  transform: rotateX(-45deg);
+}
+.box-3d div span:nth-child(3) {
+  transform: rotateX(90deg);
+}
+@keyframes animation3d {
+  0% {
+    transform: perspective(1000px) rotateX(0deg);
+  }
+  100% {
+    transform: perspective(1000px) rotateX(360deg);
+  }
 }
