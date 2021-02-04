@@ -82,3 +82,14 @@ for(let i=1;i<=20;i++)
   console.log(spiral)
 }
 console.log(spiral);
+
+
+
+const box3D=document.querySelector('.box-3d');
+
+document.addEventListener('mousemove',(e)=>{
+
+  var x= (e.pageX)/10;
+  var y=(e.pageY)/7;
+  box3D.style.transform=`perspective(1000px) rotateY(${x}deg) rotateZ(${y}deg)`;
+})
