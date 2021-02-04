@@ -86,8 +86,9 @@ console.log(spiral);
 
 
 const box3D=document.querySelector('.box-3d');
+const aniamtion3d=document.querySelector('.animation-3d');
 
-document.addEventListener('mousemove',(e)=>{
+aniamtion3d.addEventListener('mousemove',(e)=>{
 
   var x= (e.pageX)/10;
   var y=(e.pageY)/7;
