@@ -94,3 +94,31 @@ aniamtion3d.addEventListener('mousemove',(e)=>{
   var y=(e.pageY)/7;
   box3D.style.transform=`perspective(1000px) rotateY(${x}deg) rotateZ(${y}deg)`;
 })
+
+const numberHold=document.querySelector('.numbers')
+console.log(numberHold)
+var date=new Date();  
+var hourHand=document.querySelector('.hour');
+var secondHand=document.querySelector('.second');
+var minuteHand=document.querySelector('.minute');
+
+
+const interval = setInterval(updateTime,1000);
+function updateTime(){
+  date=new Date();
+  
+  var minutes=date.getMinutes();
+  minutes=(minutes*6-90+360)%360;
+
+  var hours=(date.getHours()%12 * 30-90+360 )%360 ;
+  
+  hours+=((minutes*15)/360);
+  
+  var seconds=date.getSeconds();
+  
+  seconds=(seconds*6-90+360)%360;
+  
+  hourHand.style.transform=`translateX(50%) rotateZ(${hours}deg)`
+  secondHand.style.transform=`translateX(50%) rotateZ(${seconds}deg)`
+  minuteHand.style.transform=`translateX(50%) rotateZ(${minutes}deg)`
+}
