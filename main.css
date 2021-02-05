@@ -426,7 +426,7 @@ section.clock-section::after{
   content: '';
   position: absolute;
   z-index: -1;
-  top: -300px;
+  
   width: 200%;
   height: 200%;
   animation: moveupdown 5s ease-in-out infinite alternate;
