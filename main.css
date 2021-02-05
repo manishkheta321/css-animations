@@ -435,13 +435,14 @@ section.clock-section::after{
 .hour{
   position: absolute;
   width: 90px;
-  height: 4px;
-  background-color: #000;
+  height: 5px;
+  background-color: rgb(255, 255, 255);
   
   transform-origin: left;
   transform: translateX(50%);
   z-index: 3;
   transition: all 0.25s;
+  border-radius: 10px;
 }
 
 .minute{
@@ -449,15 +450,17 @@ section.clock-section::after{
   position: absolute;
   width: 130px;
   height: 2px;
-  background-color: red;
+  background-color: white;
   
   transform-origin: left;
   transform: translateX(50%) ;
   z-index: 2;
   transition: all 0.25s;
+  border-radius: 10px;
 }
 .second{
   
+  border-radius: 10px;
   position: absolute;
   width: 160px;
   height: 1px;
@@ -465,13 +468,13 @@ section.clock-section::after{
   transform-origin: left;
   transform: translateX(50%) ;
   z-index: 1;
-  transition: all 0.25s;
+  transition: all 0.15s;
 }
 .clock .ring{
   position: absolute;
   width: 6px; 
   height: 6px;
   border-radius: 50%;
-  background-color: black;
+  background-color:white;
   z-index: 5;
 }
